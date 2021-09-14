@@ -11,6 +11,8 @@ where the optional parameter `[Some Category]` is `Cats` by default and selects 
 Python 3, Gtk 3.
 
 ## Notice
-I do not know why I wrote/like this program. There was a similar program as an old demo for (CL)S.
+I do not know why I wrote/like this program. It exists here, because it makes me smile :).
 
-If you are a language designer, this might be a nice benchmark.
+There was a similar program as an old demo for (CL)S.
+
+If you are a language designer, this might be a nice benchmark to check for "realism" of your language.
