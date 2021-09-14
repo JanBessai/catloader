@@ -2,6 +2,7 @@ import gi
 gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk
 from gi.repository import GdkPixbuf
+from gi.repository import Gdk
 import requests
 import time
 import sys
@@ -172,6 +173,7 @@ class CatLoader(Gtk.Window):
         self.image = Gtk.Image()
         self.image_box = Gtk.EventBox()
         self.image_box.add(self.image)
+        self.image_box.connect("button-press-event", self.click_image)
         # self.connect("check-resize", self._resize)
         self.add(self.image_box)
 
@@ -186,6 +188,9 @@ class CatLoader(Gtk.Window):
 
         self.set_default_size(720, 480)
         self.show_all()
+
+    def click_image(self, image_box, button):
+        Gtk.show_uri_on_window(self, self._current_image.url, Gdk.CURRENT_TIME)
 
     
     #def _resize(self, container):
